@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: #4169e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  /*overflow: hidden;*/
+  margin: 0;
+}
+
+.container {
+  /*display: flex;*/
+  display: grid;
+  margin-top: auto;
+  grid-template-rows: repeat(1, 1fr);
+  justify-content: center;
+  width: 30vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 20px;
+  position: relative;
+  -webkit-transition: all 600ms ease-out;
+}
+
+.panel h3 {
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  margin: 0;
+  opacity: 0;
+  color: #e6e6fa;
+}
+
+.panel.active {
+  flex: 5;
+  height: 80vh;
+  width: 30vw;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s linear 0.4s;
+}
+
+#alarak {
+  background-image: url(images/Alarak.jpg);
+}
+
+#artanis {
+  background-image: url(images/Artanis.jpg);
+}
+
+#raynor {
+  background-image: url(images/JimRaynor.jpg);
+}
+
+#nova {
+  background-image: url(images/Nova.jpg);
+}
+
+#queen {
+  background-image: url(images/QueenOfBaldes.jpg);
+}
+
+#swann {
+  background-image: url(images/Swann.jpg);
+}
+
+#zeratul {
+  background-image: url(images/Zeratul.jpg);
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+  }
+  .panel {
+    flex: 1;
+  }
+  .panel.active {
+    flex: 5;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .panel h3 {
+    font-size: 20px;
+  }
+}
